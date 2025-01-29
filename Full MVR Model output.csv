@@ -1,0 +1,11 @@
+Desc_multivar_model$coefficients,
+(Intercept),33.23853509
+danceability,1.59
+energy,-0.69
+loudness,0.59
+speechiness,-1.31
+acousticness,-0.37
+instrumentalness,-2.55
+liveness,0.28
+valence,-2.51
+tempo,0.44
