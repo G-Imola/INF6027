@@ -1,5 +1,5 @@
 # INF6027
- ### Investigating quantitative features in music
+ ## Investigating quantitative features in music
 
 <img 
 src = "https://raw.githubusercontent.com/G-Imola/INF6027/main/plots/Github%20plot%20for%20readme.png"
@@ -8,23 +8,51 @@ src = "https://raw.githubusercontent.com/G-Imola/INF6027/main/plots/Github%20plo
 
 ## Introduction
 
-# intro
-Investigating quantitative features in music: Statistical analysis of popularity and its relationship to musical features
+Investigating quantitative features in music: 
+
+A statistical analysis of popularity and its relationship to musical features
+
+
+Music forecasting is a highly discussed topic within the music industry, as identifying 
+the formula for "success" can give artists and producers a commercial advantage regarding investment opportunities.
+Despite its importance, it remains as an obstacle in the music industry due to the inherently contextual nature of song popularity.
+
+
+This report intended to provide additional perspectives to this field of knowledge, through examination of quantitative data present in all audio tracks. Additionally,
+the report aimed to define what musical features are associated with popular songs and genres. The specific research questions were listed as follows:
+
+
+1. Which musical feature most impacts a song’s popularity? 
+2. What features distinguish high – and low –popularity genres? 
+3. Can genre popularity be predicted?
+
+
+## Sourcing
+
+The dataset was sourced from the <a href="https://hf-proxy-cf.effarig.site/datasets/maharshipandya/spotify-tracks-dataset" target="_blank"> Maharshipandya Dataset</a>.
+
+The dataset contains 114,000 tracks with distinct musical features spanning across 114 genres, with each track containing unique numerical features with ranging scales and values.
+
+## Packages
+
+The report was carried out using R programming language Version 4.4.1 (2024-06-14 ucrt) and software  RStudio Desktop for winOS version 2024.12.0+467. Besides the base R packages, the following packages were also used:
+
+* `tidyverse`
+* `car`
+* `corrplot`
+* `RColorBrewer`
+* `treemapify`
+* `ggalt`
 
 
 ## Composite visualisations
- The dataset and code generate composite visualisations depicting the predictive power of models employed throughout analysis.
+ The dataset and code generated composite visualisations depicting the predictive power of models employed throughout analysis.
 These were visualised to provide a detailed view of musical features and their relationships to popularity across genres:
 * **Univariate popularity ~ feature analysis:**
 Presented relationships between popularity across genres, and their musical features.
 
-
 * **Multivariate popularity ~ features analysis:**
 Displayed genre - feature associations to evaluate differences between high/low popularity genres.
-
-
-
-
 
 
 ## Steps to run the code:
@@ -90,4 +118,20 @@ Additionally, generated `.csv` files are stored in the `csv ouputs` folder, whic
 * `vif scores for training data.csv`
 * `Test-dataset predicted Avg.csv`
 * and more!
+
+## key findings
+
+1. Primary predictors of popularity
+   * High popularity tracks presented high danceability, loudness, low instrumentalness and liveness.
+     * Suggests high popularity tracks are highly loud danceable tracks with little instruments and studio-produced.
+
+ 
+  * low popularity tracks presented high accousticness, and low significant values for valence,
+    * Suggests low popularity songs are primarily acoustic, slower songs with less rhythm and tempo.
+
+2. Linear modelling provides high predictive precision, however displays low explanatory power (R^2 = 7%).
+   * This suggests that popularity is primarily determined through non non-musical drivers, i.e marketing and trends.
+
+3. Genre, as a category, masks features present when displayed amongst aggregated data
+   *This implies that smaller samples with less genres allow for greater predictability, but poses the risk of skewed/biased data.
 
