@@ -107,11 +107,11 @@ After following the steps above, your IDE should display the repository, alongsi
 
 
  ### 3. Dataset Placement
-Ensure that the dataset `music_data.csv` is placed in the root
+Ensure that the <a href="https://github.com/G-Imola/Popularity-Feature-Analysis/blob/main/Original%20DatasetOriginal" target="_blank">Original Dataset</a> is downloaded and placed in the root
 directory of the cloned repository.
 
  ### 4. Execute the script
-Open #link# in Rstudio, or your preferred IDE, and run the script to generate:
+Open `R file.R` (<a href ="https://github.com/G-Imola/Popularity-Feature-Analysis/blob/main/R%20file.R">link</a>) in Rstudio, or your preferred IDE, and run the script sequentially to generate:
 1. Descriptive box plots
 2. Correlation plots
 3. Composite scatter-plots of models
