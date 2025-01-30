@@ -133,5 +133,5 @@ Additionally, generated `.csv` files are stored in the `csv ouputs` folder, whic
    * This suggests that popularity is primarily determined through non non-musical drivers, i.e marketing and trends.
 
 3. Genre, as a category, masks features present when displayed amongst aggregated data
-   *This implies that smaller samples with less genres allow for greater predictability, but poses the risk of skewed/biased data.
+   * This implies that smaller samples with less genres allow for greater predictability, but poses the risk of skewed/biased data.
 
