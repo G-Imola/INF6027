@@ -72,7 +72,7 @@ Download the project files by cloning the repository.
 This can be performed by running the following command
 in your **IDE**:
 
-`git clone `
+`git clone https://github.com/G-Imola/Popularity-Feature-Analysis.git`
 
 After cloning, verify that the active Git branch is set to **main:**
 
