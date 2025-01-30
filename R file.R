@@ -384,19 +384,18 @@ fullset_grouped_music_data_stds_long <- fullset_grouped_music_data_stds_long %>%
 #Creates a filtered dataset with only full_observed entried
 observed_replacement <- fullset_grouped_music_data_stds_long %>% filter(data_type == "full_observed")#dataframe with the correct data
 
-remaining_data <- ordered_combined_data %>% filter(data_type != "observed") %>% view()#filter removes "observed" values
+remaining_data<- final_predictions
 
 full_combined_data <- bind_rows(remaining_data, observed_replacement) #adds full_observed rows to the filtered dataframe  
-
-#I then update all values for predicted_popularity in the "full_observed" categories with the test predicted values
-full_combined_data <- full_combined_data %>%
-  group_by(track_genre, feature) %>% mutate(predicted_popularity = ifelse(data_type == "full_observed",
-                                                                          predicted_popularity[data_type == "test_predicted"],
-                                                                          predicted_popularity)) %>%
+full_combined_data <- full_combined_data %>% group_by(track_genre, feature) %>% 
+  mutate(predicted_test_pop = ifelse(any(data_type == "test-predicted"), 
+                                     predicted_test_pop[data_type == "test-predicted"],
+                                     NA)) %>%
   ungroup()
+
 #This rearranges the data in a more readable format
 full_combined_data <- full_combined_data %>% 
-  arrange(track_genre, factor(feature, levels = feature_order), factor(data_type, levels = c("full_observed", "predicted", "test-predicted")))
+  arrange(track_genre, factor(feature, levels = feature_order), factor(data_type, levels = c("full_observed", "test-predicted")))
 
 #Popularity is the average popularity score of the genre in the training data
 #test_predicted shows the predicted popularity value on the test data based on the training data
@@ -428,7 +427,7 @@ ggplot(filtered_ordered_data, aes(x = value, y = popularity, color = track_genre
        )
 
 ###----3.13 Residuals for indiv. models ----
-filtered_ordered_data$residuals <- filtered_ordered_data$popularity - filtered_ordered_data$predicted_popularity
+filtered_ordered_data$residuals <- filtered_ordered_data$popularity - filtered_ordered_data$predicted_test_pop
 
 residuals_summary_indiv_regression <- filtered_ordered_data %>% 
   group_by(feature) %>%
@@ -664,7 +663,10 @@ multivar_full <- multivar_full %>%
     track_genre %in% c("latin", "romance", "iranian") ~ "unpopular genres",
     TRUE ~ "other"
   ))
-multivar_full <- multivar_full %>% select(-7:13)
+
+
+#If duplicate rows show up, un-comment the code below
+#multivar_full <- multivar_full %>% select(-7:13)
 
 
 multivar_df_long$residuals <- multivar_df_long$popularity - multivar_df_long$pred_test_pop
