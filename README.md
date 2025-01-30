@@ -126,8 +126,8 @@ Additionally, generated `.csv` files are stored in the `csv ouputs` folder, whic
      * Suggests high popularity tracks are highly loud danceable tracks with little instruments and studio-produced.
 
  
-  * low popularity tracks presented high accousticness, and low significant values for valence,
-    * Suggests low popularity songs are primarily acoustic, slower songs with less rhythm and tempo.
+   * low popularity tracks presented high accousticness, and low significant values for valence,
+     * Suggests low popularity songs are primarily acoustic, slower songs with less rhythm and tempo.
 
 2. Linear modelling provides high predictive precision, however displays low explanatory power (R^2 = 7%).
    * This suggests that popularity is primarily determined through non non-musical drivers, i.e marketing and trends.
