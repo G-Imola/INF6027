@@ -1,15 +1,14 @@
 # INF6027
  ### Investigating quantitative features in music
-<picture>
-<source
-srcset = "https://raw.githubusercontent.com/G-Imola/INF6027/main/plots/Github%20plot%20for%20readme.png">
+
 <img 
 src = "https://raw.githubusercontent.com/G-Imola/INF6027/main/plots/Github%20plot%20for%20readme.png"
->
-</picture>
+ alt = "GitHub README Image">
+
 
 ## Introduction
 
+# intro
 Investigating quantitative features in music: Statistical analysis of popularity and its relationship to musical features
 
 
