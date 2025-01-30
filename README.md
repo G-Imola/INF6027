@@ -82,12 +82,29 @@ To check the branch, run the following command
 
 You've done this correctly if the output shows ***main.**
 
-If the branch is not set to main, you can switch to the **main:**
-branch using the following command:
+If the branch is not set to main, you can switch to the **main**
+branch by following these steps
+
+```
+#enter the terminal on your selected IDE and input the command below:
+
+cd "Popularity-Feature-Analysis"
+
+
+#Following this, type the code below:
 
 `git checkout main`
 
+
+#Finally, test to verify "main" branch has been selected:
+
+git branch
+```
 This ensures that you're working on the correct branch for the project.
+
+After following the steps above, your IDE should display the repository, alongside all other data that comes with it!
+
+
 
  ### 3. Dataset Placement
 Ensure that the dataset `music_data.csv` is placed in the root
