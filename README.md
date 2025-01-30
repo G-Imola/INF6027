@@ -8,9 +8,9 @@ src = "https://raw.githubusercontent.com/G-Imola/INF6027/main/plots/Github%20plo
 
 ## Introduction
 
-Investigating quantitative features in music: 
+### Investigating quantitative features in music:
 
-A statistical analysis of popularity and its relationship to musical features
+#### _A statistical analysis of popularity and its relationship to musical features._
 
 
 Music forecasting is a highly discussed topic within the music industry, as identifying 
