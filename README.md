@@ -74,26 +74,26 @@ in your **IDE**:
 
 `git clone https://github.com/G-Imola/Popularity-Feature-Analysis.git`
 
-After cloning, verify that the active Git branch is set to **main:**
+After cloning, verify that the active Git branch is set to **main**.
 
-To check the branch, run the following command
+To check the branch, run the following command:
 
 `git branch`
 
-You've done this correctly if the output shows ***main.**
+You've done this correctly if the output shows ***main**.
 
 If the branch is not set to main, you can switch to the **main**
-branch by following these steps
+branch by following these steps:
 
 ```
 #enter the terminal on your selected IDE and input the command below:
 
-cd "Popularity-Feature-Analysis"
+cd Popularity-Feature-Analysis
 
 
 #Following this, type the code below:
 
-`git checkout main`
+git checkout main
 
 
 #Finally, test to verify "main" branch has been selected:
@@ -138,7 +138,7 @@ Additionally, generated `.csv` files are stored in the `csv ouputs` folder, whic
 
 ## key findings
 
-1. Primary predictors of popularity
+1. Primary predictors of popularity:
    * High popularity tracks presented high danceability, loudness, low instrumentalness and liveness.
      * Suggests high popularity tracks are highly loud danceable tracks with little instruments and studio-produced.
 
