@@ -1,4 +1,4 @@
-# INF6027
+# Popularity ~ Feature Analysis for INF6027
  ## Investigating quantitative features in music
 
 <img 
@@ -72,7 +72,7 @@ Download the project files by cloning the repository.
 This can be performed by running the following command
 in your **IDE**:
 
-`link`
+`git clone `
 
 After cloning, verify that the active Git branch is set to **main:**
 
